@@ -21,7 +21,7 @@ const LogoLoop = () => {
   return (
     <div className="flex flex-col gap-4 mt-10 mb-10">
       <div className="flex-col w-full items-center flex">
-        <h3 className="gap-1 flex flex-col">
+        <h3 className="gap-1 flex flex-col text-center">
           Our Certified and Accredited Partners
           <Separator className="!h-1 !w-full rounded !bg-primary" />
         </h3>
