@@ -94,12 +94,12 @@ const ContactUs = () => {
 
                 <div className="min-w-0 flex-1">
                   <p className="font-semibold">Phone Number</p>
-                  <a
+                  <small
                     href="tel:+639050643177"
-                    className="break-words text-sm font-semibold text-muted-foreground transition-colors hover:text-primary"
+                    className="break-words font-semibold text-muted-foreground transition-colors hover:text-primary"
                   >
                     +63 905 064 3177
-                  </a>
+                  </small>
                 </div>
               </div>
 
@@ -111,12 +111,12 @@ const ContactUs = () => {
 
                 <div className="min-w-0 flex-1">
                   <p className="font-semibold">Email Address</p>
-                  <a
+                  <small
                     href="mailto:lkjit.solutions@gmail.com"
-                    className="break-all text-sm font-semibold text-muted-foreground transition-colors hover:text-primary"
+                    className="break-all font-semibold text-muted-foreground transition-colors hover:text-primary"
                   >
                     lkjit.solutions@gmail.com
-                  </a>
+                  </small>
                 </div>
               </div>
 
@@ -128,7 +128,7 @@ const ContactUs = () => {
 
                 <div className="min-w-0 flex-1">
                   <p className="font-semibold">Business Hours</p>
-                  <small className="break-words font-semibold text-muted-foreground">
+                  <small className="break-words font-semibold text-muted-foreground hover:text-primary">
                     Monday – Saturday · 8:00 AM – 5:00 PM
                   </small>
                 </div>

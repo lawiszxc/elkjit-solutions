@@ -97,10 +97,12 @@ function App() {
             onClick={closeMenu}
             className="flex min-w-0 shrink items-center gap-2 text-base font-extrabold tracking-tight transition-all duration-300 hover:scale-[1.02] sm:text-lg lg:shrink-0 lg:text-xl"
           >
-            <FaComputer size={24} className="shrink-0 text-primary" />
-            <span className="whitespace-nowrap">
-              ELKJ <span className="font-light">I.T.</span> SOLUTIONS
-            </span>
+            <img
+              src="/company_logo.jpg"
+              className="rounded-full h-10 shrink-0"
+              alt="Company-logo"
+            />
+            <span className="whitespace-nowrap">ELKJ I.T. SOLUTIONS</span>
           </a>
 
           {/* Desktop Navigation */}

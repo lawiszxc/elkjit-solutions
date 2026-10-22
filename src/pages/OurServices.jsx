@@ -18,7 +18,7 @@ const OurServices = () => {
       <div className="grid min-w-0 grid-cols-1 gap-3 xl:grid-cols-2">
         {services.map((service) => (
           <div
-            className="relative flex min-w-0 flex-col overflow-hidden rounded-sm border border-muted-foreground sm:flex-row"
+            className="relative flex min-w-0 flex-col overflow-hidden rounded-sm border border-muted-foreground sm:flex-row hover:scale-95"
             key={service.id}
           >
             {/* Service Image */}
