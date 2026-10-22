@@ -47,7 +47,7 @@ const OurServices = () => {
 
             <MdOutlineVerified
               size={25}
-              className="absolute right-1 top-1 shrink-0 text-primary"
+              className="absolute right-1 bottom-1 md:right-1 md:top-1 shrink-0 text-primary"
             />
           </div>
         ))}
