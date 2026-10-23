@@ -1,9 +1,7 @@
 import { Separator } from "@/components/ui/separator";
-import { Field, FieldGroup, FieldLabel, FieldSet } from "@/components/ui/field";
-import { Input } from "@/components/ui/input";
 import { CiClock1, CiLocationOn, CiPhone, CiMail } from "react-icons/ci";
-import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { IoMailOpenOutline } from "react-icons/io5";
 
 const ContactUs = () => {
   return (
@@ -30,7 +28,7 @@ const ContactUs = () => {
             </div>
 
             {/* Responsive Google Maps */}
-            <div className="h-[300px] w-full min-w-0 overflow-hidden rounded-xl border sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[860px]">
+            <div className="h-[300px] w-full min-w-0 overflow-hidden rounded-xl border sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[470px]">
               <iframe
                 title="ELKJ I.T. SOLUTIONS Street View"
                 src="https://maps.google.com/maps?q=8.5687092,124.5166473&layer=c&cbll=8.5687092,124.5166473&cbp=12,41.08,,0,0&output=svembed"
@@ -139,54 +137,34 @@ const ContactUs = () => {
           </div>
 
           {/* Contact Form */}
+
+          {/* Contact Form */}
+
+          {/* Contact Email Button */}
           <div className="flex min-w-0 flex-col gap-4 p-3 sm:p-4 lg:p-5">
             <div>
-              <h5>Send us a message.</h5>
+              <h5>Send us an email.</h5>
               <small>
-                Fill out the form and tell us what service you need.
+                Have questions or need our services? Send us an email.
               </small>
             </div>
 
-            <FieldSet className="min-w-0">
-              <FieldGroup>
-                <Field>
-                  <FieldLabel htmlFor="email">Email</FieldLabel>
-                  <Input
-                    id="email"
-                    type="email"
-                    autoComplete="email"
-                    placeholder="Email"
-                  />
-                </Field>
+            <Button
+              type="button"
+              className="w-full sm:w-fit"
+              onClick={() => {
+                const email = "elkjitsolutions.elsalvadorcity@gmail.com";
+                const subject = "Inquiry - ELKJ IT Solutions";
 
-                <Field>
-                  <FieldLabel htmlFor="full_name">Full name</FieldLabel>
-                  <Input
-                    id="full_name"
-                    autoComplete="name"
-                    placeholder="Full name"
-                  />
-                </Field>
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+                  email,
+                )}&su=${encodeURIComponent(subject)}`;
 
-                <Field>
-                  <FieldLabel htmlFor="subject">Subject</FieldLabel>
-                  <Input id="subject" placeholder="Subject" />
-                </Field>
-
-                <Field>
-                  <FieldLabel htmlFor="textarea-message">Message</FieldLabel>
-                  <Textarea
-                    id="textarea-message"
-                    placeholder="Type your message here."
-                    className="min-h-28"
-                  />
-                </Field>
-              </FieldGroup>
-
-              <Button type="button" className="w-full sm:w-fit">
-                Send Message
-              </Button>
-            </FieldSet>
+                window.open(gmailUrl, "_blank", "noopener,noreferrer");
+              }}
+            >
+              Send Email <IoMailOpenOutline />
+            </Button>
           </div>
         </div>
       </div>

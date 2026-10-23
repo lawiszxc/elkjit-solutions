@@ -1,4 +1,6 @@
+import ProfileCard from "@/components/ProfileCard";
 import { Separator } from "@/components/ui/separator";
+import teams from "@/lib/teams";
 
 const AboutUs = () => {
   return (
@@ -65,17 +67,41 @@ const AboutUs = () => {
           </h3>
         </div>
 
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <div className="flex h-4 w-fit items-center justify-center rounded-xl border bg-primary px-1 py-2">
             <small className="text-[10px]">Coming Soon.</small>
           </div>
+        </div> */}
+
+        <div className="flex min-w-0 justify-center mt-1 mb-4">
+          <p className="text-center">
+            Meet the people behind ELKJ IT Solutions — a dedicated team
+            committed to providing reliable technology solutions, quality
+            service, and customer satisfaction. We work together to deliver
+            solutions that meet the needs of every client.
+          </p>
         </div>
 
-        <div className="flex min-w-0 justify-center">
-          <p className="text-center">
-            We're preparing something for you. Our team profiles will be
-            available soon.
-          </p>
+        <div className="grid grid-cols-4 gap-3">
+          {teams.map((team) => (
+            <ProfileCard
+              key={team.id}
+              name={team.name}
+              title={team.title}
+              avatarUrl={`/team/${team.image}`}
+              holo={0.8}
+              glare={0.5}
+              tiltStrength={10}
+              parallax={8}
+              radius={16}
+              enableTilt
+              intro
+              showUserInfo
+              enableMobileTilt={false}
+              theme="dark"
+              onContactClick={() => console.log("Contact clicked")}
+            />
+          ))}
         </div>
       </div>
     </section>
